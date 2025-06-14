@@ -1,0 +1,3 @@
+aiogram==2.21
+sqlalchemy
+flask
