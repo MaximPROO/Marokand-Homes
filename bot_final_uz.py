@@ -10,7 +10,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 import asyncio
-from aiogram.bot.api import PROXY_URL # Import the proxy URL
 
 
 # Sozlamalar
@@ -21,8 +20,7 @@ CHANNEL_ID = "@memar_development"  # Kanal ID'sini o'zingiznikiga almashtiring (
 logging.basicConfig(level=logging.INFO)
 
 # Botni ishga tushirish
-# bot = Bot(token=BOT_TOKEN)
-bot = Bot(token=API_TOKEN, proxy=PROXY_URL)
+bot = Bot(token=BOT_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 
